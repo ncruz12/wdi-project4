@@ -14,7 +14,7 @@
 <div class='trickSingle'>
   <p><%= data.description %></p>
   <p><%= data.css_type_id %></p>
-  <a href='/tricks/<%= data.id %>/edit'>Edit this trick</a>
+
   <form action='/tricks/<%= data.id %>?_method=Delete' method='Post'>
     <input type='Submit' value='Delete' />
   </form>
