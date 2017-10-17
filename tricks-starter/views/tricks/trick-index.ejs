@@ -1,0 +1,23 @@
+<% include ../partials/boilerplate.ejs %>
+
+<header id="page-header">
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li><strong><a href="/">Home</a></strong></li>
+          <li><strong><a href="./tricks">Tricks</a></strong></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+
+
+<% for (let trick of data) { %>
+  <div class='trick'>
+    <p><%= trick.description %></p>
+    <a href='/tricks/<%= trick.id%>'> Learn More </a>
+  </div>
+<% } %>
+<a href='/tricks/new'>Add Trick</a>
+
+<% include ../partials/footer.ejs %>

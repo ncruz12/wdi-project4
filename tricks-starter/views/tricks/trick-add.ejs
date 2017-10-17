@@ -1,0 +1,33 @@
+<% include ../partials/boilerplate.ejs %>
+
+<header id="page-header">
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li><strong><a href="/">Home</a></strong></li>
+          <li><strong><a href="./tricks">Tricks</a></strong></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+
+<form method='POST' action='/tricks'>
+
+<label for='css_type_id'> CSS Category
+        <select name='css_type_id' type='text'>
+          <option value='1'>Gradients</option>
+          <option value='2'>Images</option>
+          <option value='3'>Animations</option>
+          <option value='4'>Transitions</option>
+          <option value='5'>2D Transforms</option>
+          <option value='6'>3D Transforms</option>
+        </select>
+      </label></br>
+      <input name='description' type='text' placeholder='Description' />
+
+  <input type='submit' value='Add CSS!' />
+<form>
+
+<a href='/tricks/'> View all tricks </a>
+
+<% include ../partials/footer.ejs %>
