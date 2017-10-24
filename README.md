@@ -13,6 +13,6 @@ CSS Tricks is a an application where the user can learn more about the wonders o
 #### Wireframes:
   Homepage ![HomePage](https://github.com/ncruz12/wdi-project4/blob/master/assets/Home-Screen.png)
   
-  Tricks Page ![TricksPage](https://github.com/ncruz12/wdi-project4/blob/master/assets/TricksPage.png)
+  Tricks-Page ![TricksPage](https://github.com/ncruz12/wdi-project4/blob/master/assets/TricksPage.png)
   
-  Single Trick Page ![Single Trick Page](https://github.com/ncruz12/wdi-project4/blob/master/assets/SingleTrickPage.png)
+Single-Trick-Page ![Single Trick Page](https://github.com/ncruz12/wdi-project4/blob/master/assets/SingleTrickPage.png)
