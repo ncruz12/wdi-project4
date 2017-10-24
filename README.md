@@ -16,3 +16,7 @@ CSS Tricks is a an application where the user can learn more about the wonders o
   Tricks-Page ![TricksPage](https://github.com/ncruz12/wdi-project4/blob/master/assets/TricksPage.png)
   
 Single-Trick-Page ![Single Trick Page](https://github.com/ncruz12/wdi-project4/blob/master/assets/SingleTrickPage.png)
+
+## ERD 
+Entity Relationship Diagram 
+![ERD](https://github.com/ncruz12/wdi-project4/blob/master/assets/ER%20Diagram.png)
