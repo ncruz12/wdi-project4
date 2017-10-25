@@ -12,12 +12,22 @@
 </header>
 
 
-<% for (let trick of data) { %>
-  <div class='trick'>
-    <p><%= trick.description %></p>
-    <a href='/tricks/<%= trick.id%>'> Learn More </a>
-  </div>
-<% } %>
-<a href='/tricks/new'>Add Trick</a>
+<div class='trick-page'>
+  <% for (let trick of data) { %>
+    <div class='trick'>
+      <p><%= trick.description %></p>
+      <a href='/tricks/<%= trick.id%>'> Learn More </a>
+    </div>
+    <div class='trick2'>
+      <p><%= trick.description %></p>
+      <a href='/tricks/<%= trick.id%>'> Learn More </a>
+    </div>
+    <div class='trick3'>
+      <p><%= trick.description %></p>
+      <a href='/tricks/<%= trick.id%>'> Learn More </a>
+    </div>
+  <% } %>
+  <a href='/tricks/new'>Add Trick</a>
+</div>
 
 <% include ../partials/footer.ejs %>

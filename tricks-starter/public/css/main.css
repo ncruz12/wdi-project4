@@ -50,18 +50,86 @@ button {
 }
 
 .home-screen p {
-  font-family: Georgia;
+  font-family: Cinzel Decorative;
   font-size: 50px;
   animation: main-title infinite 5s linear;
 }
 
 @keyframes main-title {
- from{color:white;}
- to {color: #660033;}
+ 0% {color: red;}
+ 16% {color: orange;}
+ 32% {color: yellow;}
+ 48% {color: green;}
+ 64% {color: blue;}
+ 80% {color: purple;}
 }
 
 .home-screen a {
   text-decoration: none;
 }
+
+/******* TRICKS PAGEE ********/
+.trick-page a {
+  text-align: center;
+}
+
+.trick {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trick {
+  height: 170px;
+  background: radial-gradient(circle, purple, lightpink, lightblue);
+}
+
+/*.trick1 {
+  background: radial-gradient(circle, purple, lightpink, lightblue);
+}*/
+
+.trick2 {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  background-color: blue;
+  animation-name: stretch;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    background-color: blue;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: purple;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: red;
+  }
+}
+
+.trick3 {
+  width: 100px;
+  height: 300px;
+  background-color: lightblue;
+  transition: all 1s ease-in-out;
+}
+
+.trick3:hover {
+  width: 350px;
+  height: 150px;
+  background-color: lightgreen;
+}
+
+
 
 
