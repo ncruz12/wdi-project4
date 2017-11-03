@@ -11,42 +11,30 @@ body {
   padding: 25px;
 }
 
-li {
-  display: inline;
-}
-
-li a {
-  font-family: Georgia;
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  text-transform: uppercase;
-  margin: 30px;
-}
-
 ul {
   text-align: right;
 }
 
-/**** BUTTONS ****/
-button {
-  border: 1px solid #808080;
-  background-color: white;
-  border-radius: 30px;
-  font-size: 15px;
+li {
+  display: inline-block;
+}
+
+li a {
+  text-decoration: none;
+  font-family: Cinzel Decorative;
+  color: white;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 30px;
 }
 
 /**** HOME PAGE  ****/
 .home-screen {
   border: 2px solid black;
-  /*border-radius: 100px;*/
-  width: 100%;
-  margin: auto;
   background: url('/images/home-screen.png') no-repeat center fixed;
   background-size: cover;
   text-align: center;
   padding: 200px;
-  /*animation: main-title infinite 5s linear;*/
 }
 
 .home-screen p {
@@ -68,9 +56,48 @@ button {
   text-decoration: none;
 }
 
-/******* TRICKS PAGEE ********/
+/**** BUTTONS IN SINGLE PAGE AND HOME PAGE  ****/
+.SPButton button {
+  border: 1px solid #808080;
+  background-color: #002266;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin: 3% auto;
+  font-family: Georgia;
+  font-size: 18px;
+}
+
+.SPButton, .TPButton, button a {
+  text-decoration: none;
+  color: white;
+}
+
+.TPButton button {
+  border: 1px solid #808080;
+  background-color: #002266;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin: 3% auto;
+  font-family: Georgia;
+  font-size: 14px;
+}
+
+/******* ALL TRICKS PAGE ********/
 .trick-page a {
   text-align: center;
+}
+
+.trick-page {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*border: 3px solid blue;*/
+  /*width: 600px;*/
+  max-width: 100%;
+  height: auto;
+  padding: 100px 200px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom right, cornflowerblue, lightcoral, cornflowerblue);
 }
 
 .trick {
@@ -78,18 +105,108 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 5px solid cornflowerblue;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 20px;
 }
 
-.trick {
-  height: 170px;
+.trick p {
+  font-family: Georgia;
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+  margin: inherit;
+}
+
+/******* SINGLE TRICK PAGE *******/
+.code-combo {
+  border: 3px solid green;
+  width: 96%;
+  height: 90%;
+  display: flex;
+  margin: 20px auto;
+}
+
+.top-display {
+  margin: 20px auto;
+}
+
+.top-display p {
+  font-family: Georgia;
+  font-size: 18px;
+  padding: 2px;
+}
+
+.top-display h2 {
+  font-family: Georgia;
+  padding: 5px;
+}
+
+.html-code {
+  border: 1px solid red;
+  display: flex;
+  width: 40%;
+  /*align-items: center;*/
+  padding: 60px;
+  margin: 10px 10px;
+}
+
+.css-code {
+  border: 1px solid red;
+  display: flex;
+  width: 35%;
+  padding: 60px;
+  margin: 10px 10px;
+}
+
+.html-code p {
+  margin-top: -40px;
+  font-family: Georgia;
+  font-size: 18px;
+}
+
+.css-code p {
+  margin-top: -40px;
+  font-family: Georgia;
+  font-size: 18px;
+}
+
+.css-trick {
+  display: flex;
+  border: 1px solid black;
+  margin: 10px 10px;
+  max-width: 100%;
+  height: auto;
+  /*width: 71%;
+  height: 200px;*/
+}
+
+.fade-text button {
+  flex: 0 0 30%;
+}
+
+/********* INDIVIDUAL TRICK *********/
+
+.Gradients {
+  height: 265px;
+  width: 500px;
   background: radial-gradient(circle, purple, lightpink, lightblue);
 }
 
-/*.trick1 {
-  background: radial-gradient(circle, purple, lightpink, lightblue);
-}*/
+.Images {
+  background: url('/images/palmTrees.png') no-repeat right fixed;
+  height: 75px;
+  width: 60%;
+  padding: 94px;
+}
 
-.trick2 {
+.Images:hover {
+  transform: scaleX(-1);
+}
+
+.Animations {
   height: 150px;
   width: 150px;
   margin: 0 auto;
@@ -100,7 +217,6 @@ button {
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
-
 
 @keyframes stretch {
   0% {
@@ -117,19 +233,30 @@ button {
   }
 }
 
-.trick3 {
+.Transition {
   width: 100px;
-  height: 300px;
+  height: 200px;
   background-color: lightblue;
   transition: all 1s ease-in-out;
 }
 
-.trick3:hover {
+.Transition:hover {
   width: 350px;
-  height: 150px;
+  height: 200px;
   background-color: lightgreen;
 }
 
+.Opacity {
+  background: url('/images/sunset.png') no-repeat right fixed;
+  opacity: 0.5;
+  /*width: 200px;
+  height: 150px;*/
+  padding: 100px;
+}
 
-
+.Shadow p {
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
 
