@@ -4,8 +4,9 @@ module.exports = {
   makeBlankTrick(req, res, next) {
     const blankTrick = {
       id: null,
+      category: null,
       description: null,
-      css_type: null,
+      codes_type: null,
     };
     res.locals.trick = blankTrick;
     next();
@@ -20,9 +21,9 @@ module.exports = {
   },
   getOne(req, res, next) {
     trick.findById(req.params.id)
-    .then((trick) => {
-      res.locals.trick = trick;
-      next();
+      .then((trick) => {
+        res.locals.trick = trick;
+        next();
     })
     .catch(err => next(err));
   },
@@ -34,17 +35,15 @@ module.exports = {
       })
       .catch(err => next(err));
   },
-  // update(req, res, next) {
-  //   //console.log(req.body, 'update controller');
-  //   console.log('inside update function');
-  //   //console.log(req.body);
-  //   trick.update(req.body, req.params.id)
-  //     .then((trick) => {
-  //       console.log(trick);
-  //       //res.locals.trick = trick;
-  //     })
-  //     .catch(err => next(err));
-  // },
+  update(req, res, next) {
+    console.log(req.body, 'update controller');
+    trick.update(req.body)
+      .then((trick) => {
+        res.locals.trick = trick;
+        next();
+      })
+      .catch(err => next(err));
+  },
   destroy(req, res, next) {
     trick.destroy(req.params.id)
       .then(() => next())

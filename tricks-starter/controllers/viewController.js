@@ -14,19 +14,24 @@ module.exports = {
   showOne(req, res) {
     res.render('tricks/trick-single', {
       data: res.locals.trick,
-    });
+      // console.log(res.locals.trick);
+    });console.log(res.locals.trick);
   },
   showAddForm(req, res) {
     res.render('tricks/trick-add');
   },
-  //
+  showEditForm(req, res) {
+    res.render('tricks/trick-edit', {
+      data: res.locals.trick,
+    });
+  },
   handleCreate(req, res) {
     res.redirect('/tricks');
   },
-  // handleUpdate(req, res) {
-  //   console.log('in handle update');
-  //   res.redirect(`/tricks/${req.params.id}`);
-  // },
+  handleUpdate(req, res) {
+    // console.log('in handle update');
+    res.redirect(`/tricks/${req.params.id}`);
+  },
   handleDelete(req, res) {
     res.redirect('/tricks');
   },
