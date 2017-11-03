@@ -4,21 +4,50 @@
     <div class="wrapper">
       <nav>
         <ul>
-          <li><strong><a href="/">Home</a></strong></li>
-          <li><strong><a href="/tricks/">Tricks</a></strong></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tricks/">Tricks</a></li>
         </ul>
       </nav>
     </div>
 </header>
 
 <div class='trickSingle'>
-  <p><%= data.description %></p>
-  <p><%= data.css_type_id %></p>
+
+  <div class='top-display'>
+    <p>Category:</p>
+      <h2><%= data.category %></h2>
+    <p>Description:</p>
+      <h2><%= data.description %></h2>
+  </div>
+
+  <div class='code-combo'>
+
+    <div class='html-code'>
+      <p>HTML Code:</p>
+        <h2><%= data.html_code %></h2>
+    </div>
+
+    <div class='css-code'>
+      <p>CSS Code:</p>
+        <h2><%= data.css_code %></h2>
+    </div>
+
+    <div class='css-trick'>
+      <div class= '<%= data.category %>'>
+        <p>SEE MY TRICK ?!<p>
+      </div>
+    </div>
+
+  </div>
 
   <form action='/tricks/<%= data.id %>?_method=Delete' method='Post'>
     <input type='Submit' value='Delete' />
   </form>
-  <button><a href='/tricks/'>See all tricks</a></button>
+
+  <div class='SPButton'>
+    <button><a href='/tricks/'>See all tricks</a></button>
+  </div>
+
 </div>
 
 <% include ../partials/footer.ejs %>

@@ -4,8 +4,8 @@
     <div class="wrapper">
       <nav>
         <ul>
-          <li><strong><a href="/">Home</a></strong></li>
-          <li><strong><a href="./tricks">Tricks</a></strong></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tricks/">Tricks</a></li>
         </ul>
       </nav>
     </div>
@@ -13,21 +13,21 @@
 
 
 <div class='trick-page'>
+
   <% for (let trick of data) { %>
     <div class='trick'>
-      <p><%= trick.description %></p>
-      <a href='/tricks/<%= trick.id%>'> Learn More </a>
+      <p><%= trick.category %></p>
+      <div class='TPButton'>
+        <button><a href='/tricks/<%= trick.id%>'> Learn More </a></button>
+      </div>
     </div>
-    <div class='trick2'>
-      <p><%= trick.description %></p>
-      <a href='/tricks/<%= trick.id%>'> Learn More </a>
-    </div>
-    <div class='trick3'>
-      <p><%= trick.description %></p>
-      <a href='/tricks/<%= trick.id%>'> Learn More </a>
-    </div>
+
   <% } %>
-  <a href='/tricks/new'>Add Trick</a>
+
 </div>
+
+  <div id='Add'>
+    <a href='/tricks/new'>Add Trick</a>
+  </div>
 
 <% include ../partials/footer.ejs %>
