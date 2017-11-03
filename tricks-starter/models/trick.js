@@ -6,46 +6,46 @@ const db = pgp(dbConfig);
 module.exports = {
   findAll() {
     return db.many(`
-      SELECT tricks.id, description, css_type_id
-      FROM tricks INNER JOIN css_types
-      ON tricks.css_type_id = css_types.id
+      SELECT tricks.id, category, description
+      FROM tricks INNER JOIN codes
+      ON tricks.codes_id = codes.id
     ORDER BY id
       `);
   },
   findById(id) {
     return db.one(`
-      SELECT tricks.id, description, css_types.css_type
-        FROM tricks INNER JOIN css_types
-        ON tricks.css_type_id = css_types.id
+      SELECT tricks.id, category, description, codes.html_code, codes.css_code
+        FROM tricks INNER JOIN codes
+        ON tricks.codes_id = codes.id
       WHERE tricks.id = $1;
     `, id);
   },
   save(trick) {
     console.log(trick)
-    trick.css_type_id = Number.parseInt(trick.css_type_id, 10);
+    trick.codes_id = Number.parseInt(trick.codes_id, 10);
     return db.one(`
       INSERT INTO tricks
-      (description, css_type_id)
+      (category, description, codes_id)
+
       VALUES
-      ($/description/, $/css_type_id/)
+      ($/category/, $/description/, $/codes_id/)
       RETURNING *
     `, trick);
   },
-  // update(trick, id) {
-  //   console.log('===>',trick);
-  //   console.log(id)
-  //   return db.one(`
-  //     UPDATE tricks
-  //     SET
-  //     description = $1
-  //     WHERE id = $2
-  //   `, [trick.description, id]);
-  // },
+  update(trick) {
+    return db.one(`
+      UPDATE tricks
+      SET
+      description = $/description/
+      WHERE id = $/id/
+      RETURNING *
+    `, trick);
+  },
   destroy(id) {
     return db.none(`
       DELETE
         FROM tricks
         WHERE id = $1
-      `, id)
+      `, id);
   },
 };
