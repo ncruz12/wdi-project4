@@ -11,11 +11,15 @@
     </div>
 </header>
 
+<div id='top-header'>
+  <h4>Dive in to the following CSS Topics!</h4>
+</div>
 
 <div class='trick-page'>
 
   <% for (let trick of data) { %>
     <div class='trick'>
+
       <p><%= trick.category %></p>
       <div class='TPButton'>
         <button><a href='/tricks/<%= trick.id%>'> Learn More </a></button>
@@ -26,8 +30,6 @@
 
 </div>
 
-  <div id='Add'>
-    <a href='/tricks/new'>Add Trick</a>
-  </div>
+
 
 <% include ../partials/footer.ejs %>
