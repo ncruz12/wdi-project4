@@ -11,7 +11,7 @@ let db;
 
 if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
   db = pgp({
-    database: 'css_tricks_db',
+    database: 'adaquote_development',
     port: 5432,
     host: 'localhost',
   });
