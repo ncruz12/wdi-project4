@@ -32,15 +32,6 @@ module.exports = {
       RETURNING *
     `, trick);
   },
-  update(trick) {
-    return db.one(`
-      UPDATE tricks
-      SET
-      description = $/description/
-      WHERE id = $/id/
-      RETURNING *
-    `, trick);
-  },
   destroy(id) {
     return db.none(`
       DELETE
