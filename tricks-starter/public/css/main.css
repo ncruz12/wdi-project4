@@ -58,6 +58,7 @@ li a {
 
 /**** BUTTONS IN SINGLE PAGE AND HOME PAGE  ****/
 .SPButton button {
+  display: flex;
   border: 1px solid #808080;
   background-color: #002266;
   border-radius: 10px;
@@ -83,6 +84,14 @@ li a {
 }
 
 /******* ALL TRICKS PAGE ********/
+#top-header {
+  font-family: Georgia;
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 5px -4px 4px lightcoral;
+  letter-spacing: 2px;
+}
+
 .trick-page a {
   text-align: center;
 }
@@ -175,7 +184,7 @@ li a {
 
 .css-trick {
   display: flex;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin: 10px 10px;
   max-width: 100%;
   height: auto;
@@ -194,12 +203,19 @@ li a {
   width: 500px;
   background: radial-gradient(circle, purple, lightpink, lightblue);
 }
+.Gradients p {
+  display: none;
+}
 
 .Images {
   background: url('/images/palmTrees.png') no-repeat right fixed;
   height: 75px;
   width: 60%;
   padding: 94px;
+}
+
+.Images p {
+  font-size: 20px;
 }
 
 .Images:hover {
@@ -233,6 +249,10 @@ li a {
   }
 }
 
+.Animations p {
+  display: none;
+}
+
 .Transition {
   width: 100px;
   height: 200px;
@@ -242,21 +262,25 @@ li a {
 
 .Transition:hover {
   width: 350px;
-  height: 200px;
+  height: 150px;
   background-color: lightgreen;
 }
 
 .Opacity {
   background: url('/images/sunset.png') no-repeat right fixed;
-  opacity: 0.5;
+  opacity: 0.7;
   /*width: 200px;
   height: 150px;*/
   padding: 100px;
 }
 
-.Shadow p {
+.Opacity p {
+  display: none;
+}
+
+.Shadow p:hover {
   color: white;
-  font-size: 25px;
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black, 2px 0 25px blue, 0 0 5px darkblue;
 }
 
