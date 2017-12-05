@@ -1,4 +1,4 @@
-\c css_tricks_db;
+
 
 -- INSERT INTO css_types (css_type) VALUES
 -- ('Gradients'),

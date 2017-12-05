@@ -1,4 +1,4 @@
-\c css_tricks_db;
+
 
 -- DROP TABLE IF EXISTS css_types;
 -- DROP TABLE IF EXISTS tricks;
