@@ -1,14 +1,14 @@
-# CSS TRICKS 
+# CSS MAGIC
 
 ## Description
-CSS Tricks is a an application where the user can learn more about the wonders of CSS(Cascading Style Sheets). Many people seem to not like CSS at all and since I enjoy and like it, I decided to focus this project on demostrating the many GREAT things CSS can do!
+CSS Magic is a an application where the user can learn more about the wonders of CSS(Cascading Style Sheets). Many people seem to dislike CSS and since I enjoy the design and visual concept of it, I decided to focus this project on demostrating several things CSS can achieve. If others would like to replicate a similar effect all they would have to do is use CSS Magic as a refernce to explore the many different capabilities of CSS.  
 
 ## User Stories and Wireframes
 #### User Stories: 
 - User will be on home page and can click a button which will lead them to the to the Tricks page.
-- Once the User is on the Tricks page they can click on the View More link to go see that particular animation. 
-- 
-- When the User is viewing a specific CSS Trick, they will see the name of that CSS Type along with the code that gets that CSS to show. The User will also be seeing a live example of that CSS.
+- Once the User is on the Tricks page they can click on the View More link to learn more about that topic.
+- When the User is viewing a specific CSS topic, they will see the name of that CSS type along with the HTML & CSS code that gets that specific topic to display the way it does. 
+- The User will also be seeing a live example of that CSS. 
 
 #### Wireframes:
   Homepage ![HomePage](https://github.com/ncruz12/wdi-project4/blob/master/assets/Home-Screen.png)
