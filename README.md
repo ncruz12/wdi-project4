@@ -10,6 +10,14 @@ CSS Magic is a an application where the user can learn more about the wonders of
 - When the User is viewing a specific CSS topic, they will see the name of that CSS type along with the HTML & CSS code that gets that specific topic to display the way it does. 
 - The User will also be seeing a live example of that CSS. 
 
+## Technolgies
+- Express
+- Node.js
+- EJS
+- PostgreSQL
+- HTML 
+- CSS
+
 #### Wireframes:
   Homepage ![HomePage](https://github.com/ncruz12/wdi-project4/blob/master/assets/Home-Screen.png)
   
